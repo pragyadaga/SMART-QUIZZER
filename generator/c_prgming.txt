@@ -1,0 +1,1 @@
+C is imperative programming language. It is structured and efficient. It supports static and dynamic linking. It was invented by Dennis-Ritchie.

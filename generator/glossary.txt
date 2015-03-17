@@ -1,0 +1,4 @@
+imperative
+structured
+static
+Dennis-Ritchie
