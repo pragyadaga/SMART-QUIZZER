@@ -1,6 +1,8 @@
 In file_convert_read.py
 	modify the path to pdftotext.exe
 
+Put pywin32 in the default python directory
+
 run as 
 	python file_convert_read.py <input_file_name>
 
