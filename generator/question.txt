@@ -1,0 +1,4 @@
+C is _____ programming language.
+ It is _____ and efficient.
+ It supports _____ and dynamic linking.
+ It was invented by _____.

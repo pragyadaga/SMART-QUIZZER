@@ -1,0 +1,4 @@
+Java is a general-purpose computer _____ language that is concurrent, class-based, object-oriented,[12] and specifically designed to have as few implementation dependencies as possible.
+Java is a general-purpose _____ programming language that is concurrent, class-based, object-oriented,[12] and specifically designed to have as few implementation dependencies as possible.
+Java is a general-purpose computer programming _____ that is concurrent, class-based, object-oriented,[12] and specifically designed to have as few implementation dependencies as possible.
+Java is a general-purpose computer programming language that is concurrent, class-based, object-oriented,[12] and specifically designed to have as few _____ dependencies as possible.
