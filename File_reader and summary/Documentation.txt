@@ -1,0 +1,23 @@
+Documentation
+
+Reading .pdf
+	used the native python pdfMiner - was not very stable gave errors while working with it
+	used pypdf - didn't work. had errors
+	used xpdfbin - windows based application that converts the .pdf to .txt. worked like a charm.
+
+Reading .doc and .docx
+	python-docx - didn't work
+	pywin32 - worked - generated a .txt file
+
+.txt files
+	directly handled
+
+Summarizer
+	encoding error while reading and writing summarizer files
+		.txt files where encoded differently
+		.txt files modified and rewritten in UTF-8 - thus uniform files where generated
+	worked well on small files
+	large files gave memory error
+	modified to generate paragraph-wise summary
+
+Part of the document can be given as input if the file is a pdf
