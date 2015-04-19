@@ -1,0 +1,4 @@
+1)select t.class_id,t.test_id,AVG(r.score) as class_average from test t,class c,result r where c.class_id=t.class_id and t.test_id=r.test_id (//i dont know if there is "and" here)group by t.test_id ;
+2)select t.class_id,t.course_id,t.test_id,AVG(r.score),i.i_id from result r,instructor i,test t where i.i_id="CSEAAA" and i.i_id=t.i_id and t.course_id="12CS351" and t.class_id="12CSEA" and t.test_id=r.test_id  group by r.test_id
+3)select t.course_id,r.USN,t.test_id,r.score from result r,test t,takes tk,course c,student s where s.USN="1PI12CS102" and r.test_id=t.test_id and t.course_id="12CS351" and r.USN=tk.USN and tk.course_id=t.course_id group by r.test_id
+4)select r.USN ,t.course_id,AVG(r.score) from test t,result r,student s where s.USN="1PI12CS102" and s.USN=r.USN and t.test_id=r.test_id group by t.course_id
