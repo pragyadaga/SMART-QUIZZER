@@ -1,0 +1,208 @@
+.top-buffer {
+	margin-top: 100px;
+}
+
+.top-buffer-sm {
+	margin-top: 20px;
+}
+
+.btn-margin{
+	margin-right: 15px;
+	width: 100px;
+}
+
+.tab-content{
+	padding: 10px;
+	border: 1px solid #ddd;
+
+	border-radius: 5px;
+	border-radius: 5px;
+}
+
+.sideborder{
+	padding-right: 15px;
+	border-bottom: 0;
+}
+.sideborder li{
+	border-bottom: 1px solid #ddd;
+}
+
+.wrapper{
+	min-height: 470px;
+}
+
+.tabwrapper{
+	min-height: 500px;
+	margin-left: -15px;
+	border-left: 1px dotted #ddd;
+	padding-right: 0;
+}
+
+.panel-footer{
+	text-align: center;
+}
+
+.panel-footer a{
+	margin-left: 40px;
+}
+
+.navbar-brand img{
+	margin-top: -12px;
+}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.file-input-wrapper {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.error-page, .error-file{
+    color: red;
+    text-align: center;
+}
+.error-select{
+    color: red;
+}
+
+#modalContent{
+    width: 1000px;
+    margin-left: -200px;
+}
+
+#date-error{
+    color: red;
+    margin-right: 100px;
+}
+
+#ques-error{
+    color: red;
+    margin-left: 50px;
+}
+
+#ques-edit{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 440px;
+}
+
+.my-row{
+    padding: 10px;
+    border-bottom: 1px dotted black;
+}
+
+.add-more{
+    position: absolute;
+    right: 100px;
+    top: 10px;
+}
+
+.close-modal{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+#event-details{
+    min-height: 400px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+#quiz-details{
+    margin-top: 10px;
+    padding: 10px 5px 5px 15px;
+    border-top: 1px dotted black;
+}
+
+#group_pic{
+    margin: 20px 20px 20px 0;
+    float: left;
+    height: 200px;
+    width: 350px;
+}
+
+.go-btn{
+    margin-left: 30px;
+}
+
+#class-result-graph, #indivisual-result-graph{
+    width: 600px;
+    height: 345px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.text-danger{
+    color: red;
+}
+
+.input-align-for{
+    margin-left: 20px;
+    width: 190px;
+    float: left;
+}
+
+.input-align-course{
+    width: 200px;
+    float: left;
+}
+
+.input-align-usn{
+    margin: 0 20px 0 30px;
+    width: 220px;
+    float: left;
+}
+
+.input-align-page{
+    margin: 10px 50px 5px 10px;
+    width: 100px;
+    float: left;
+}
+
+.input-align-class{
+    margin: 0 20px 0 20px;
+    width: 220px;
+    float: left;
+}
+
+.page-input{
+    padding: 10px;
+}
+
+.page-number-label{
+    margin: 10px 0 10px 5px;
+    float: left;
+}
+
+#pending-quiz-details{
+    padding: 30px 70px 10px 150px;
+}
+
+#pending-quiz-frame{
+    min-height: 400px;
+    border: 0;
+    width: 550px;
+}
