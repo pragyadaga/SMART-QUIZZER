@@ -1,0 +1,9 @@
+<form method="GET" action="eval.php">
+<div ng-repeat="q in quiz.question" font="Helvetica" style="width: 300px;border : 5px solid #00a1e2;padding : 10px;{{$last?'':'border-bottom: none'}};">
+<label>{{q}}</label><br>
+Answer : <input type="text" name={{"answer"+$index}}></input>
+<br>
+</div>
+<input type="text" name="testID" value={{quiz.testID}} hidden></input>
+<input id="submitbutton" type="submit"></input>
+</form>
