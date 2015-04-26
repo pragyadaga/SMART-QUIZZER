@@ -19,6 +19,11 @@ if($st_login!="yes")
     <link rel="stylesheet" href="/style/bootstrap.min.css">
 
 	<script src="/script/angular.js" type="text/javascript"></script>
+	<script type="text/javascript">
+        	window.onbeforeunload = function(){
+                	return 'You are about to leave this Page. If you are submitting your answers Please Verify before leaving this page. Do not leave this page without submitting your answers.';
+        	};
+    	</script>
 	<title></title>
 </head>
 <body>
