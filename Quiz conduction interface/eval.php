@@ -7,8 +7,10 @@ $score=0;
 $questionCount = count($_SESSION['questionIDs']);
 for($x = 0; $x < $questionCount; $x++) {
     $curQId =  $_SESSION['questionIDs'][$x];
-    $result=mysqli_query($conn,"SELECT answer FROM question WHERE test_id='$tid' AND q_id='$curQId'");
+    $result=mysqli_query($conn,"SELECT question,answer FROM question WHERE test_id='$tid' AND q_id='$curQId'");
     $row = mysqli_fetch_array($result);
+    echo "Question :".$row['question'];
+    echo "<br>";
     if($row['answer'] == null)
     {
     	echo "Your failed to answer this question. Correct answer is ".$row['answer'];
