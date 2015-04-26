@@ -7,7 +7,7 @@ include_once $_SERVER['DOCUMENT_ROOT']."/consql.php";
 $questions = array();
 $questionID = array();
 $tid = $_GET["testID"];
-	$result=mysqli_query($conn,"SELECT q_id,question FROM question WHERE test_id='$tid'");
+	$result=mysqli_query($conn,"SELECT q_id,question FROM question WHERE test_id='$tid' ORDER BY RAND() LIMIT 30");
 	if (!$result) { // add this check.
     die('Invalid query: ' . mysql_error());
 	}
