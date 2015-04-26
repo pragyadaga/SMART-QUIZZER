@@ -1,0 +1,3 @@
+C is an imperative programming language. Founder of C is Dennis Ritchie. C-plus-plus and Java are object oriented language but C is not an object oriented language. C is called structural programming language. It follows modular approach of programming.
+
+

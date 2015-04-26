@@ -1,0 +1,239 @@
+.
+.
+.
+.
+MySQL is one of the best RDBMS being used for developing web based software applications.
+.
+A database is a separate application that stores a collection of data.
+.
+So now a days we use relational database management systems (RDBMS) to store and manager huge volume of data.
+.
+Updates the indexes automatically.
+.
+.
+Table: A table is a matrix with data.
+.
+.
+.
+.
+.
+Primary Key: A primary key is unique.
+.
+Foreign Key: A foreign key is the linking pin between two tables.
+.
+Index: An index in a database resembles an index at the back of a book.
+.
+.
+.
+.
+MySQL is a fast, easy-to-use RDBMS used being used for many small and big businesses.
+MySQL is a very powerful program in its own right.
+.
+MySQL uses a standard form of the well-known SQL data language.
+.
+MySQL works very quickly and works well even with large data sets.
+.
+.
+.
+.
+.
+This tutorial focuses heavily on using MySQL in a PHP environment.
+.
+.
+All downloads for MySQL are located at MySQL Downloads.
+.
+The recommended way to install MySQL on a Linux system is via RPM.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+Login to the system using root user.
+.
+.
+.
+.
+.
+You can find all the MySQL related binaries in /usr/bin and /usr/sbin.
+.
+.
+.
+Default installation on any version of Windows is now much easier than it used to be, as MySQL now comes neatly packaged with an installer.
+.
+Test the server by firing it up from the command prompt the first time.
+.
+.
+If all went well, you will see some messages about startup and InnoDB.
+MySQL will not add itself to the start menu, and there is no particularly nice GUI way to stop the server either.
+.
+.
+.
+Use mysqladmin binary to check server version.
+.
+It will produce following result on Linux.
+.
+.
+.
+.
+.
+You can connect to your MySQL server by using MySQL client using mysql command.
+.
+.
+It should be rewarded with a mysql> prompt.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+MySQL ships with a blank password for the root MySQL user.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+First check if your MySQL server is running or not.
+.
+If your MySql is running then you will see mysqld process listed out in your result.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+When adding a new user remember to encrypt the new password using PASSWORD() function provided by MySQL.
+.
+.
+This tells the server to reload the grant tables.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+SHOW DATABASES: Lists the databases that are accessible by the MySQL DBMS.
+.
+.
+.
+.
+.
+.
+.
+.
+MySQL works very well in combination of various programming languages like PERL, C, C++, JAVA and PHP.
+This tutorial focuses heavily on using MySQL in a PHP environment.
+PHP provides various functions to access MySQL database and to manipulate data records inside MySQL database.
+.
+.
+The second part of the function name is specific to the function, usually a word that describes what the function does.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+Welcome to the MySQL monitor.
+Type 'help;' or '\h' for help.
+In above example we have used root as a user but you can use any other user.
+.
+.
+.
+PHP provides mysql_connect() function to open a database connection.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+Optional - The username accessing the database.
+.
+.
+.
+.
+.
+You can disconnect from MySQL database anytime using another PHP function mysql_close().
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+You would need special privilege to create or to delete a MySQL database.
+.
+.
+.
+.
+.
+PHP uses mysql_query function to create or delete a MySQL database.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.
+.

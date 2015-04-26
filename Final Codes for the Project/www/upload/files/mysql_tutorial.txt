@@ -1,0 +1,304 @@
+Tutorials Point, Simply Easy Learning
+MySQL Tutorial
+Tutorialspoint.com
+MySQL is the most popular Open Source Relational SQL database management system.
+MySQL is one of the best RDBMS being used for developing web based software applications. This tutorial gives an initial push to start you with MySQL. For more detail kindly check tutorialspoint.com/mysql
+What is Database?
+A database is a separate application that stores a collection of data. Each database has one or more distinct APIs for creating, accessing, managing, searching, and replicating the data it holds.
+Other kinds of data stores can be used, such as files on the file system or large hash tables in memory but data fetching and writing would not be so fast and easy with those type of systems.
+So now a days we use relational database management systems (RDBMS) to store and manager huge volume of data. This is called relational database because all the data is stored into different tables and relations are established using primary keys or other keys known as foreign keys.
+A Relational DataBase Management System (RDBMS) is a software that:
+ Enables you to implement a database with tables, columns, and indexes.  Guarantees the Referential Integrity between rows of various tables.  Updates the indexes automatically.  Interprets an SQL query and combines information from various tables.
+RDBMS Terminology:
+Before we proceed to explain MySQL database system, lets revise few definitions related to database.
+ Database: A database is a collection of tables, with related data.  Table: A table is a matrix with data. A table in a database looks like a simple
+spreadsheet.
+ Column: One column (data element) contains data of one and the same kind, for
+example the column postcode.
+ Row: A row (= tuple, entry or record) is a group of related data, for example the data
+of one subscription.
+ Redundancy: Storing data twice, redundantly to make the system faster.  Primary Key: A primary key is unique. A key value can not occur twice in one table.
+With a key you can find at most one row.
+ Foreign Key: A foreign key is the linking pin between two tables.  Compound Key: A compound key (composite key) is a key that consists of multiple
+columns, because one column is not sufficiently unique.
+ Index: An index in a database resembles an index at the back of a book.  Referential Integrity: Referential Integrity makes sure that a foreign key value
+always points to an existing row.
+MySQL Database:
+1|Page
+
+Tutorials Point, Simply Easy Learning
+MySQL is a fast, easy-to-use RDBMS used being used for many small and big businesses. MySQL is developed, marketed, and supported by MySQL AB, which is a Swedish company. MySQL is becoming so popular because of many good reasons.
+ MySQL is released under an open-source license. So you have nothing to pay to use it.  MySQL is a very powerful program in its own right. It handles a large subset of the
+functionality of the most expensive and powerful database packages.
+ MySQL uses a standard form of the well-known SQL data language.  MySQL works on many operating systems and with many languages including PHP,
+PERL, C, C++, JAVA etc.
+ MySQL works very quickly and works well even with large data sets.  MySQL is very friendly to PHP, the most appreciated language for web development.  MySQL supports large databases, up to 50 million rows or more in a table. The default
+file size limit for a table is 4GB, but you can increase this (if your operating system can handle it) to a theoretical limit of 8 million terabytes (TB).
+ MySQL is customizable. The open source GPL license allows programmers to modify the
+MySQL software to fit their own specific environments.
+Before You Begin:
+Before you begin this tutorial you should have a basic knowledge of the information covered in our PHP and HTML tutorials.
+This tutorial focuses heavily on using MySQL in a PHP environment. Many examples given in this tutorial will be useful for PHP Programmers.
+We recommend you check our PHP Tutorial for your reference.
+Downloading MySQL:
+All downloads for MySQL are located at MySQL Downloads. Pick the version number for MySQL Community Server you want and, as exactly as possible, the platform you want.
+Installing MySQL on Linux/Unix
+The recommended way to install MySQL on a Linux system is via RPM. MySQL AB makes the following RPMs available for download on its web site:
+ MySQL - The MySQL database server, which manages databases and tables, controls
+user access, and processes SQL queries.
+ MySQL-client - MySQL client programs, which makes it possible to connect to, and
+interact with, the server.
+ MySQL-devel - Libraries and header files that come in handy when compiling other
+programs that use MySQL.
+ MySQL-shared - Shared libraries for the MySQL client  MySQL-bench - Benchmark and performance testing tools for the MySQL database
+server.
+The MySQL RPMs listed here are all built on a SuSE Linux system, but they.ll usually work on other Linux variants with no difficulty.
+Now follow the following steps to proceed for installation:
+1. Login to the system using root user. 2. Switch to the directory containing the RPMs: 3. Install the MySQL database server by executing the following command. Remember to
+replace the filename in italics with the file name of your RPM.
+2|Page
+
+Tutorials Point, Simply Easy Learning
+[root@host]# rpm -i MySQL-5.0.9-0.i386.rpm
+Above command takes care of installing MySQL server, creating a user of MySQL, creating necessary configuration and starting MySQL server automatically.
+You can find all the MySQL related binaries in /usr/bin and /usr/sbin. All the tables and databases will be created in /var/lib/mysql directory.
+4. This is optional but recommended step to install the remaining RPMs in the same manner:
+[root@host]# rpm -i MySQL-client-5.0.9-0.i386.rpm [root@host]# rpm -i MySQL-devel-5.0.9-0.i386.rpm [root@host]# rpm -i MySQL-shared-5.0.9-0.i386.rpm [root@host]# rpm -i MySQL-bench-5.0.9-0.i386.rpm
+Installing MySQL on Windows:
+Default installation on any version of Windows is now much easier than it used to be, as MySQL now comes neatly packaged with an installer. Simply download the installer package, unzip it anywhere, and run setup.exe.
+Default installer setup.exe will walk you through the trivial process and by default will install everything under C:\mysql.
+Test the server by firing it up from the command prompt the first time. Go to the location of the mysqld server, which is probably C:\mysql\bin, and type:
+mysqld.exe --console
+NOTE: If you are on NT then you will have to use mysqld-nt.exe instead of mysqld.exe
+If all went well, you will see some messages about startup and InnoDB. If not, you may have a permissions issue. Make sure that the directory that holds your data is accessible to whatever user (probably mysql) the database processes run under.
+MySQL will not add itself to the start menu, and there is no particularly nice GUI way to stop the server either. Therefore, if you tend to start the server by double clicking the mysqld executable, you should remember to halt the process by hand by using mysqladmin, Task List, Task Manager, or other Windows-specific means.
+Verifying MySQL Installation:
+After MySQL has been successfully installed, the base tables have been initialized, and the server has been started, you can verify that all is working as it should via some simple tests.
+Use the mysqladmin Utility to Obtain Server Status:
+Use mysqladmin binary to check server version. This binary would be available in /usr/bin on linux and in C:\mysql\bin on windows.
+[root@host]# mysqladmin --version
+It will produce following result on Linux. It may vary depending on your installation:
+3|Page
+
+Tutorials Point, Simply Easy Learning
+
+mysqladmin Ver 8.23 Distrib 5.0.9-0, for redhat-linux-gnu on i386
+
+If you do not get such message then there may be some problem in your installation and you would need some help to fix it.
+Execute simple SQL commands using MySQL Client:
+
+You can connect to your MySQL server by using MySQL client using mysql command. At this momemnt you do not need to give any password as by default it will be set to blank.
+So just use following command
+[root@host]# mysql
+
+It should be rewarded with a mysql> prompt. Now you are connected to the MySQL server and you can execute all the SQL command at mysql> prompt as follows.
+
+mysql> SHOW DATABASES;
+
++----------+
+
+| Database |
+
++----------+
+
+| mysql |
+
+| test
+
+|
+
++----------+
+
+2 rows in set (0.13 sec)
+
+Post-installation Steps:
+
+MySQL ships with a blank password for the root MySQL user. As soon as you have successfully installed the database and client you need to set a root password as follows:
+
+[root@host]# mysqladmin -u root password "new_password";
+
+Now to make a connection to your MySQL server you would have to use following command:
+[root@host]# mysql -u root -p Enter password:*******
+
+Unix users will also want to put your MySQL directory in your PATH, so you won't have to keep typing out the full path every time you want to use the command-line client. For bash, it would be something like:
+export PATH=$PATH:/usr/bin:/usr/sbin
+Running MySQL at boot time:
+If you want to run MySQL server at boot time then make sure you have following entry in /etc/rc.local file
+/etc/init.d/mysqld start
+
+Also,you should have mysqld binary in /etc/init.d/ directory.
+4|Page
+
+Tutorials Point, Simply Easy Learning
+
+Running and Shutting down MySQL Server:
+First check if your MySQL server is running or not. You can use following command to check this:
+ps -ef | grep mysqld
+
+If your MySql is running then you will see mysqld process listed out in your result. If server is not running then you can start it by using following command:
+root@hoat# cd /usr/bin ./safe_mysqld &
+
+Now if you want to shutdown an already running MySQL server then you can do it by using following command:
+
+root@hoat# cd /usr/bin ./mysqladmin -u root -p shutdown Enter password: ******
+Setting Up a MySQL User Accounts:
+
+For adding a new user to MySQL you just need to add a new entry to user table in database mysql.
+Below is an example of adding new user guest with SELECT, INSERT and UPDATE privileges with the password guest123 the SQL query is :
+
+root@host# mysql -u root -p Enter password:******* mysql> use mysql; Database changed
+
+mysql> INSERT INTO user (host, user, password, select_priv, insert_priv, update_priv) VALUES ('localhost', 'guest', PASSWORD('guest123'), 'Y', 'Y', 'Y');
+Query OK, 1 row affected (0.20 sec)
+
+mysql> FLUSH PRIVILEGES; Query OK, 1 row affected (0.01 sec)
+
+mysql> SELECT host, user, password FROM user WHERE user = 'guest';
+
++-----------+---------+------------------+
+
+| host
+
+| user | password
+
+|
+
++-----------+---------+------------------+
+
+| localhost | guest | 6f8c114b58f2ce9e |
+
++-----------+---------+------------------+
+
+1 row in set (0.00 sec)
+
+When adding a new user remember to encrypt the new password using PASSWORD() function provided by MySQL. As you can see in the above example the password mypass is encrypted to 6f8c114b58f2ce9e.
+
+5|Page
+
+Tutorials Point, Simply Easy Learning
+Notice the FLUSH PRIVILEGES statement. This tells the server to reload the grant tables. If you don't use it then you won't be able to connect to mysql using the new user account at least until the server is rebooted.
+You can also specify other privileges to a new user by setting the values of following columns in user table to 'Y' when executing the INSERT query or you can update them later using UPDATE query.
+ Select_priv  Insert_priv  Update_priv  Delete_priv  Create_priv  Drop_priv  Reload_priv  Shutdown_priv  Process_priv  File_priv  Grant_priv  References_priv  Index_priv  Alter_priv
+Another way of adding user account is by using GRANT SQL command; Following example will ada user zara with password zara123 for a particular database called TUTORIALS.
+root@host# mysql -u root -p password; Enter password:******* mysql> use mysql; Database changed
+mysql> GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP -> ON TUTORIALS.* -> TO 'zara'@'localhost' -> IDENTIFIED BY 'zara123';
+This will also create an entry in mysql database table called user.
+NOTE: MySQL does not terminate a command until you give a semi colon (;) at the end of SQL command.
+The /etc/my.cnf File Configuration:
+Most of the cases you should not touch this file. By default it will have following entries:
+[mysqld] datadir=/var/lib/mysql socket=/var/lib/mysql/mysql.sock
+[mysql.server] user=mysql basedir=/var/lib
+[safe_mysqld] err-log=/var/log/mysqld.log pid-file=/var/run/mysqld/mysqld.pid
+6|Page
+
+Tutorials Point, Simply Easy Learning
+Here you can specify a different directory for error log, otherwise you should not change any entry in this table.
+Administrative MySQL Command:
+Here is the list of important MySQL command which you will use time to time to work with MySQL database:
+ USE Databasename : This will be used to select a particular database in MySQL
+workarea.
+ SHOW DATABASES: Lists the databases that are accessible by the MySQL DBMS.  SHOW TABLES: Shows the tables in the database once a database has been selected
+with the use command.
+ SHOW COLUMNS FROM tablename: Shows the attributes, types of attributes, key
+information, whether NULL is permitted, defaults, and other information for a table.
+ SHOW INDEX FROM tablename: Presents the details of all indexes on the table,
+including the PRIMARY KEY.
+ SHOW TABLE STATUS LIKE tablename\G: Reports details of the MySQL DBMS
+performance and statistics.
+MySQL PHP Syntax
+MySQL works very well in combination of various programming languages like PERL, C, C++, JAVA and PHP. Out of these languages, PHP is the most popular one because of its web application development capabilities.
+This tutorial focuses heavily on using MySQL in a PHP environment. If you are interested in MySQL with PERL then you can look into PERL and MySQL Tutorial.
+PHP provides various functions to access MySQL database and to manipulate data records inside MySQL database. You would require to call PHP functions in the same way you call any other PHP function.
+The PHP functions for use with MySQL have the following general format:
+mysql_function(value,value,...);
+The second part of the function name is specific to the function, usually a word that describes what the function does. The following are two of the functions which we will use in our tutorial
+mysqli_connect($connect); mysqli_query($connect,"SQL statement");
+Following example shows a generic sysntax of PHP to call any MySQL function.
+<html> <head> <title>PHP with MySQL</title> </head> <body> <?php
+$retval = mysql_function(value, [value,...]); if( !$retval ) {
+die ( "Error: a related error message" );
+7|Page
+
+Tutorials Point, Simply Easy Learning
+
+} // Otherwise MySQL ?> </body> </html>
+
+or PHP Statements
+
+Starting from next chapter we will see all the important MySQL functionality along with PHP.
+MySQL Database Connection
+You can establish MySQL database using mysql binary at command prompt.
+Example:
+
+Here is a simple example to connect to MySQL server from command prompt:
+[root@host]# mysql -u root -p Enter password:******
+
+This will give you mysql> command prompt where you will be able to execute any SQL command. Following is the result of above command:
+Welcome to the MySQL monitor. Commands end with ; or \g. Your MySQL connection id is 2854760 to server version: 5.0.9
+Type 'help;' or '\h' for help. Type '\c' to clear the buffer.
+
+In above example we have used root as a user but you can use any other user. Any user will be able to perform all the SQL operation which are allowed to that user.
+You can disconnect from MySQL database any time using exit command at mysql> prompt.
+mysql> exit Bye
+MySQL Connection using PHP Script:
+PHP provides mysql_connect() function to open a database connection. This function takes five parameters and returns a MySQL link identifier on success, or FALSE on failure.
+Syntax:
+connection mysql_connect(server,user,passwd,new_link,client_flag);
+
+Parameter server
+
+Description
+Optional - The host name running database server. If not specified then default value is localhost:3036.
+
+8|Page
+
+Tutorials Point, Simply Easy Learning
+
+user passwd new_link
+client_flags
+
+Optional - The username accessing the database. If not specified then default is the name of the user that owns the server process.
+Optional - The password of the user accessing the database. If not specified then default is an empty password.
+Optional - If a second call is made to mysql_connect() with the same arguments, no new connection will be established; instead, the identifier of the already opened connection will be returned.
+Optional - A combination of the following constants:
+ MYSQL_CLIENT_SSL - Use SSL encryption  MYSQL_CLIENT_COMPRESS - Use compression protocol  MYSQL_CLIENT_IGNORE_SPACE - Allow space after function names  MYSQL_CLIENT_INTERACTIVE - Allow interactive timeout seconds of
+inactivity before closing the connection
+
+You can disconnect from MySQL database anytime using another PHP function mysql_close(). This function takes a single parameter which is a connection returned by mysql_connect() function.
+Syntax:
+bool mysql_close ( resource $link_identifier );
+If a resource is not specified then last opened database is closed. This function returns true if it closes connection successfully otherwise it returns false.
+Example:
+Try out following example to connect to a MySQL server:
+<html> <head> <title>Connecting MySQL Server</title> </head> <body> <?php
+$dbhost = 'localhost:3036'; $dbuser = 'guest'; $dbpass = 'guest123'; $conn = mysql_connect($dbhost, $dbuser, $dbpass); if(! $conn ) {
+die('Could not connect: ' . mysql_error()); } echo 'Connected successfully'; mysql_close($conn); ?> </body> </html>
+
+9|Page
+
+Tutorials Point, Simply Easy Learning
+
+Create MySQL Database
+You would need special privilege to create or to delete a MySQL database. So assuming you have access to root user, you can create any database using mysql mysqladmin binary.
+Example:
+Here is a simple example to create database called TUTORIALS:
+[root@host]# mysqladmin -u root -p create TUTORIALS Enter password:******
+This will create a MySQL database TUTORIALS.
+Create Database using PHP Script:
+PHP uses mysql_query function to create or delete a MySQL database. This function takes two parameters and returns TRUE on success or FALSE on failure.
+Syntax:
+bool mysql_query( sql, connection );
+
+Parameter sql connection
+
+Description
+Required - SQL query to create or delete a MySQL database
+Optional - if not specified then last opened connection by mysql_connect will be used.
+
+Example:
+Try out following example to create a database:
+<html> <head> <title>Creating MySQL Database</title> </head> <body> <?php $dbhost = 'localhost:3036'; $dbuser = 'root'; $dbpass = 'rootpassword'; $conn = mysql_connect($dbhost, $dbuser, $dbpass); if(! $conn ) {
+die('Could not connect: ' . mysql_error()); } echo 'Connected successfully<br />'; $sql = 'CREATE DATABASE TUTORIALS'; $retval = mysql_query( $sql, $conn );
+10 | P a g e
+
+
